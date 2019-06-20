@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brown"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0sp"
+                android:text="Connect (끌어치기)"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/DBOUT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="그래프 및 유사율 (유저 값과 비교)"
+                android:padding="0sp"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/DBOUT2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="그래프 및 유사율(정답 값과 비교)"
+                android:padding="0sp"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/DBSAVE"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="디비 비교값 저장"
+                android:padding="0sp"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Button
+                android:id="@+id/btnBluetoothOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="블루투스 ON"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnBluetoothOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="블루투스 OFF"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/btnBluetoothOn"
+                app:layout_constraintTop_toTopOf="@+id/btnBluetoothOn" />
+
+            <TextView
+                android:id="@+id/tvBluetoothStatus"
+                android:layout_width="170dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:text="status"
+                app:layout_constraintStart_toStartOf="@+id/btnBluetoothOn"
+                app:layout_constraintTop_toBottomOf="@+id/btnBluetoothOn" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="연결하기"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2.5"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/tvBluetoothStatus"
+                app:layout_constraintTop_toBottomOf="@+id/tvBluetoothStatus" />
+
+            <TextView
+                android:id="@+id/tvReceiveData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Receive"
+                app:layout_constraintStart_toStartOf="@+id/btnSendData"
+                app:layout_constraintTop_toBottomOf="@+id/btnSendData" />
+
+            <Button
+                android:id="@+id/btnSendData"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:text="전송"
+                app:layout_constraintStart_toStartOf="@+id/btnConnect"
+                app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
+
+            <EditText
+                android:id="@+id/tvSendData"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Send Data"
+                app:layout_constraintStart_toEndOf="@+id/btnSendData"
+                app:layout_constraintTop_toTopOf="@+id/btnSendData" />
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/hit_chart"
+                android:layout_width="match_parent"
+                android:layout_height="340dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="300dp"
+                android:alpha="0.3"
+                android:src="@drawable/ball" />
+        </FrameLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="147dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart2"
+            android:layout_width="match_parent"
+            android:layout_height="147dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="속도 정보"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="2.5"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_weight="0.31"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.11"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/sendText"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/sendButton"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:fontFamily="1"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:shadowRadius="1" />
+
+                <ListView
+                    android:id="@+id/listMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/sendButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" >
+                </ListView>
+
+                <Button
+                    android:id="@+id/sendButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:enabled="false"
+                    android:text="Send" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/deviceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/device" />
+
+            <TextView
+                android:id="@+id/deviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/deviceLabel"
+                android:text="@string/no_device"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/rssival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="_"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
