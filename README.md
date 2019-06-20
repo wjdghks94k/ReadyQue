@@ -10,7 +10,8 @@ Using the touched value of the sensor, the user can actually see the target poin
 
 This source code can be compiled with Android Studio and Gradle. 
 
-### 역할 분담
+역할 분담
+---------
 ##### 조형준(팀장): 
 1. DB구축, PHP서버 구축, 피드백 알고리즘 
 2. 특허-MySQL과 PHP서버
